@@ -114,7 +114,7 @@ public class App {
                                     System.out.println("Digite o título do filme:");
                                     String titulo = sc.nextLine();
                                     Filme novoFilme = new Filme(idFilme, idGenero , titulo);
-                                    Filme.inserirFilme(novoFilme);
+                                    Filme.cadastrarFilme(novoFilme);
                                     filmes.add(novoFilme);
                                     generoEncontrado = true;
                                     break;
