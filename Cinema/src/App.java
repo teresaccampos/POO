@@ -19,6 +19,14 @@ public class App {
             System.out.println("Menu Principal:");
             System.out.println("1 - Gênero: Cadastrar, Editar, Listar, Consultar");
             System.out.println("2 - Filme: Cadastrar, Editar, Listar, Consultar");
+            System.out.println("3 - Ator: Cadastrar, Editar, Listar, Consultar");
+            System.out.println("4 - Funcionario: Cadastrar, Editar, Listar, Consultar");
+            System.out.println("5 - Sessao: Cadastrar, Editar, Listar, Consultar");
+            System.out.println("6 - Ingresso: Cadastrar, Editar, Listar, Consultar");
+            System.out.println("7 - Sala: Cadastrar, Editar, Listar, Consultar");
+            System.out.println("8 - Assento: Cadastrar, Editar, Listar, Consultar");
+            System.out.println("9 - Tipo do assento: Cadastrar, Editar, Listar, Consultar");
+
             System.out.println("0 - Sair");
             int opcao = sc.nextInt();
             sc.nextLine(); 
@@ -74,7 +82,9 @@ public class App {
                             
                             break;
                         case 3:
-                            Filme.listarFilmes(generos);
+                            for (Genero g : generos) {
+                                System.out.println("ID: " + g.getId() + " - Título: " + g.getDesc());
+                            }
                             break;
                         case 4:
                         System.out.println("Digite o nome do genero que deseja consultar:");
@@ -160,7 +170,27 @@ public class App {
                             }
                             break;    
                     }
-                    break;
+                break;
+
+                case 3:
+                System.out.println("1 - Cadastrar Ator");
+                System.out.println("2 - Editar Ator");
+                System.out.println("3 - Listar Atores");
+                System.out.println("4 - Consultar Ator");
+                int opcaoAtor = sc.nextInt();
+                sc.nextLine();
+
+                switch (opcaoAtor) {
+                    case 1:
+                        System.out.println("Digite o registro do Ator:");
+                        int registroAtor = sc.nextInt();
+                        sc.nextLine();
+
+                        Ator novoAtor = new Ator("6879958", "Paulo", "iuiye812789",registroAtor);
+                        System.out.println(novoAtor);
+                    break;   
+                }
+            break;
             }
         }
 
